@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/beautycommerce.iml" filepath="$PROJECT_DIR$/.idea/beautycommerce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beautycommerce-id/beautycommerce-id.iml" filepath="$PROJECT_DIR$/beautycommerce-id/beautycommerce-id.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core-beautycommerceid-service/core-beautycommerceid-service.iml" filepath="$PROJECT_DIR$/core-beautycommerceid-service/core-beautycommerceid-service.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../../css/register-seller.css}" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="container-fluid">
+    <!-- first of navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="box-shadow: none;height: auto;"
+        id="navbar-top">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a class="navbar-brand" href="home.html">
+                    <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/crpxxbjw9qxckgkdvexc"
+                        height="50" alt="Olive Young Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav-pills flex-column flex-sm-row">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdownM" role="button"
+                            data-mdb-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item">All Categories</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Skincare</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Makeup</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Body</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Hair</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Masks</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">Suncare</a>
+                    </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Skincare</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Makeup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Body</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Hair</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Masks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Suncare</a>
+                </li>
+                </ul>
+            </div>
+            <form class="input-group my-auto w-25 justify-content-end">
+                <input id="search-focus" type="search" class="form-control rounded-6" placeholder="Search"
+                    style="height: auto;" />
+            </form>
+            <span class="input-group-text border-0" id="search-addon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+            </span>
+            <ul class="navbar-nav nav-pills flex-column flex-sm-row">
+                <!-- <li class="nav-item">
+                    <a class="btn btn-dark" href="form-login-and-register-seller.html" aria-current="page" data-mdb-ripple-color="dark" role="button">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-dark" href="#" aria-current="page" data-mdb-ripple-color="dark" role="button">Help</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="form-login-and-register-seller.html" aria-current="page">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" aria-current="page">Help</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- the end of navbar -->
+    <div class="main">
+        <!-- start of breadcrumbs -->
+        <nav class="navbar navbar-expand-lg" style="box-shadow: none;">
+            <div class="align-baseline">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Skincare</a></li>
+                        <li class="breadcrumb-item"><a href="#">Moisturizers</a></li>
+                        <li class="breadcrumb-item"><a href="#"><u class="text-black">Toner</u></a></li>
+                    </ol>
+                </nav>
+        </nav>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col">Kiri atas</div>
+                    <div class="col">Tengah atas</div>
+                    <div class="col">
+                        Kanan atas
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">Kiri Tengah</div>
+                    <!-- <div class="col">Tengah Tengah</div> -->
+                    <div class="col">Kanan Tengah</div>
+                </div>
+                <div class="row">
+                    <div class="col">Kiri Bawah</div>
+                    <!-- <div class="col">Tengah Bawah</div> -->
+                    <div class="col">Kanan Bawah</div>
+                </div>
+            </div>
+            <!-- end of breadcrumbs -->
+            <!-- <div class="card-body">
+            <div class="card align-baseline">
+                <div class="btn-group-vertical" role="" style="box-shadow: none;">
+                    <button type="button" class="btn mb-3 btn-link active"><a href="#gambarZoom1" aria-current="true"
+                            role="button" data-bs-toggle="button">
+                            <img id="gambar1"
+                                src="https://image.globaloliveyoungshop.com/prdtImg/1191/19ce59dc-b44a-4d13-81b8-ae2d3c0d3960.jpg?RS=810x810&AR=0"
+                                alt="" style="height: 50px;width: 50px;box-shadow: none;"></a></button>
+                    <button type="button" class="btn mb-4 btn-link"><a href="#gambarZoom2" aria-current="false"
+                            role="button" data-bs-toggle="button">
+                            <img id="gambar2"
+                                src="https://image.globaloliveyoungshop.com/prdtImg/1872/60451e47-9637-43b1-9290-04eeee7dce01.jpg?RS=1500x1500&AR=0"
+                                alt="" style="height: 50px;width: 50px;"></a></button>
+                </div>
+            </div>
+            <div class="tab-content" id="img-zoom">
+                <div class="show active" id="gambarZoom1" aria-labelledby="gambar1">
+                    <img src="https://image.globaloliveyoungshop.com/prdtImg/1191/19ce59dc-b44a-4d13-81b8-ae2d3c0d3960.jpg?RS=810x810&AR=0"
+                        alt="" style="width: 520px; height: 520px;">
+                </div>
+                <div class="show active" id="gambarZoom2" aria-labelledby="gambar2">
+                    <img src="https://image.globaloliveyoungshop.com/prdtImg/1872/60451e47-9637-43b1-9290-04eeee7dce01.jpg?RS=1500x1500&AR=0"
+                        alt="" style="width: 520px; height: 520px;">
+                </div>
+            </div>
+        </div> -->
+        </div>
+</body>
+
+</html>
