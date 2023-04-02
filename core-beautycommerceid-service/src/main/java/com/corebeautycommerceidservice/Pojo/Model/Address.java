@@ -15,8 +15,8 @@ public class Address {
     
     @JsonProperty("addressId")
     private UUID addressId;
-    @JsonProperty("recepientName")
-    private String recepientName;
+    @JsonProperty("recipientName")
+    private String recipientName;
     @JsonProperty("fullAddress")
     private Text fullAddress;
     @JsonProperty("province")
