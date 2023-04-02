@@ -4,17 +4,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 @Controller
 public class LoginController {
     
     @GetMapping("/")
-    public String loginPage(Model model){
-        return "home.html";
+    public String home(){
+        return "home";
     }
 
-    @GetMapping("/login-register")
-    public String registerPage(Model model){
-        return "register-seller.html";
+    @GetMapping("/login")
+    public String loginPage(){
+        return "form-login-and-register-seller";
     }
 }

@@ -27,7 +27,6 @@ public class Address {
     private int postalCode;
     @JsonProperty("phoneNumber")
     private String phoneNumber;
-
     @SneakyThrows
     @Override
     public String toString() {
