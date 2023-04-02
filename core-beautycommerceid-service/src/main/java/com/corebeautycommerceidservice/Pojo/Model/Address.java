@@ -17,8 +17,8 @@ public class Address {
     private UUID addressId;
     @JsonProperty("recepientName")
     private String recepientName;
-    @JsonProperty("fullAdress")
-    private Text fullAdress;
+    @JsonProperty("fullAddress")
+    private Text fullAddress;
     @JsonProperty("province")
     private String province;
     @JsonProperty("city")
@@ -27,6 +27,7 @@ public class Address {
     private int postalCode;
     @JsonProperty("phoneNumber")
     private String phoneNumber;
+
     @SneakyThrows
     @Override
     public String toString() {
