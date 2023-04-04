@@ -6,21 +6,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 
-@RestController
+//@RestController
 @Controller
 public class LoginController {
 
-    @PostMapping("/")
-    public String loginPage(Model model){
-        return "home.html";
-    }
-    @GetMapping("/")
-    public String Login(Model model, WebRequest request){
-        return "home.html";
-    }
 
-    @GetMapping("/login-register")
-    public String registerPage(Model model){
-        return "register-seller.html";
+    @GetMapping("/")
+    public String home(){
+        return "home";
+    }
+    @GetMapping("/login")
+    public String loginPage(){
+        return "form-login-and-register-seller";
     }
 }
