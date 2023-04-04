@@ -12,6 +12,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="beautycommerce" target="11" />
       <module name="beautycommerce-id" target="17" />
       <module name="core-beautycommerceid-service" target="11" />
     </bytecodeTargetLevel>
