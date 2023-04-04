@@ -17,6 +17,11 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2022.0.1</spring-cloud.version>
+		<bootstrap.version>4.0.0-2</bootstrap.version><!--PENAMBAHAN 06-03-2023        -->
+		<webjars-locator.version>0.30</webjars-locator.version><!--PENAMBAHAN 06-03-2023  -->
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<!-- <dependency>
