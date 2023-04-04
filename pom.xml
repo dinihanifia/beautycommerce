@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.beautycommerce.id</groupId>
+    <artifactId>beautycommerce-id</artifactId>
+    <version>${parent.version}</version>
+    <name>beautycommerce-ids</name>
+    <description>E-commerce for Beauty Products</description>
+    <packaging>pom</packaging>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- db -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+        <!--  -->
+
+    </dependencies>
+    <modules>
+        <module>beautycommerce-ui-id</module>
+        <module>core-beautycommerceid-service</module>
+    </modules>
+
+	<dependencyManagement>
+	
+		<dependencies>
+			<dependency>
+				<artifactId>beautycommerce-ui-id</artifactId>
+				<groupId>com.beautycommerce.id</groupId>
+			</dependency>
+			<dependency>
+				<artifactId>core-beautycommerceid-service</artifactId>
+				<groupId>com.beautycommerce.id</groupId>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+    <properties>
+		<java.version>11</java.version>
+		<beautycommerce.ui.id>0.0.1</beautycommerce.ui.id>
+		<core.beautycommerce.service>0.0.1</core.beautycommerce.service>
+		<parent.version>0.0.1</parent.version>
+		<spring-cloud.version>2022.0.1</spring-cloud.version>
+	</properties>
+</project>

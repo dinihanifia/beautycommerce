@@ -7,6 +7,9 @@ import java.sql.Statement;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.corebeautycommerceidservice.Enum.DatabaseConstant;
+
 import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
@@ -17,7 +20,7 @@ public class CoreBeautycommerceidServiceApplication {
 		Connection connection = null;
 		Statement statement = null;
 		try {
-			log.debug("Creating Database If It's Not Exist");
+			log.debug(DatabaseConstant.DATABASE_NOT_EXIST);
 			connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/", "postgres", "150600");
 			statement = connection.createStatement();
 			statement.executeQuery("SELECT count(*) FROM pg_database WHERE datname = 'beautycommerce'");
@@ -26,9 +29,9 @@ public class CoreBeautycommerceidServiceApplication {
 			int count = resultSet.getInt(1);
 			if (count <= 0) {
 				statement.executeUpdate("CREATE DATABASE beautycommerce");
-				log.debug("Database Created Succesfully");
+				log.debug(DatabaseConstant.DATABASE_CREATED);
 			} else {
-				log.debug("Database Already Exist");
+				log.debug(DatabaseConstant.DATABASE_EXIST);
 			}
 		} catch (SQLException e) {
 			log.error(e.toString());
@@ -36,10 +39,10 @@ public class CoreBeautycommerceidServiceApplication {
 			try {
 				if (statement != null) {
 					statement.close();
-					log.debug("Closed Statement.");
+					log.debug(DatabaseConstant.DATABASE_DISCONNECT_STATEMENT);
 				}
 				if (connection != null) {
-					log.debug("Closed Connection.");
+					log.debug(DatabaseConstant.DATABASE_DISCONNECT);
 					connection.close();
 				}
 			} catch (SQLException e) {
