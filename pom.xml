@@ -48,10 +48,10 @@
         <!--  -->
 
     </dependencies>
-    <modules>
-        <module>beautycommerce-ui-id</module>
-        <module>core-beautycommerceid-service</module>
-    </modules>
+<!--    <modules>-->
+<!--        <module>beautycommerce-ui-id</module>-->
+<!--        <module>core-beautycommerceid-service</module>-->
+<!--    </modules>-->
 
 	<dependencyManagement>
 	

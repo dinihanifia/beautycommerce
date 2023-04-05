@@ -10,7 +10,6 @@ import org.springframework.web.context.request.WebRequest;
 @Controller
 public class LoginController {
 
-
     @GetMapping("/")
     public String home(){
         return "home";
@@ -18,5 +17,9 @@ public class LoginController {
     @GetMapping("/login")
     public String loginPage(){
         return "form-login-and-register-seller";
+    }
+    @GetMapping("/products")
+    public String products(){
+        return "products";
     }
 }
